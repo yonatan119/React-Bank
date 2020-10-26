@@ -51,7 +51,6 @@ class Operations extends Component {
                 <div>
                 <Deposit id="deposit" name={"deposit"} onClick = {this.deposit}></Deposit>
                 <Payment id="withdraw" name={"withdraw"} onClick = {this.withdraw}></Payment>
-                {/* <button id="Withdraw" name={"withdraw"} onClick = {this.withdraw}>Withdraw</button> */}
                 </div>
             </div>
         );

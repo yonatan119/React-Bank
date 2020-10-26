@@ -30,8 +30,8 @@ app.post('/transaction', async function (req,res){
     res.send(newTransaction)
 
 })
-app.delete('/transaction/:amount/:vendor/:category',function(req,res){
-    const transaction = req.params
+app.delete('/transaction/:amount/:vendor/:category',async function(req,res){
+    const transaction = await req.params
     Transaction.findOneAndDelete({amount:transaction.amount, vendor:transaction.vendor, category:transaction.category})
     .then((response) => res.send(response))
 })
